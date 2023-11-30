@@ -54,3 +54,5 @@ gem 'rswag-ui'
 gem "httparty", "~> 0.21.0"
 
 gem "dotenv-rails", "~> 2.8"
+
+gem "postmark-rails", "~> 0.22.1"
