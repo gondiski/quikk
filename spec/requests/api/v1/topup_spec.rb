@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'swagger_helper'
 
 RSpec.describe "Api::V1::Topups", type: :request do
   describe "GET /new" do

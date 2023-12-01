@@ -1,0 +1,11 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths: {}
+servers:
+- url: http://127.0.0.1:3000
+  description: Development environment
+- url: https://quikk.onrender.com
+  description: Production environment
