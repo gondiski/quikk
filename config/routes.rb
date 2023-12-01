@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :developers
   namespace :api do
     namespace :v1 do
+      get 'topup/new'
       get 'developers/new'
       get 'developers/edit'
       get 'developers/update'
