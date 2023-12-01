@@ -17,6 +17,9 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: localhost
+  username: postgres
+  password: password
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -80,7 +83,4 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: quikk_production
-  username: quikk
-  password: <%= ENV["QUIKK_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>

@@ -56,3 +56,11 @@ gem "httparty", "~> 0.21.0"
 gem "dotenv-rails", "~> 2.8"
 
 gem "postmark-rails", "~> 0.22.1"
+
+gem "devise", "~> 4.9"
+
+gem "devise-jwt", "~> 0.11.0"
+
+gem "jsonapi-serializer", "~> 2.2"
+
+gem "letter_opener", group: :development

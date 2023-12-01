@@ -68,6 +68,10 @@ Rails.application.configure do
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
 
+  config.action_mailer.delivery_method = :postmark
+  
+  config.action_mailer.postmark_settings = { :api_token => ENV["POSTMARK_KEY"] }
+
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
