@@ -4,6 +4,84 @@ info:
   title: API V1
   version: v1
 paths:
+  "/api/v1/topups":
+    get:
+      summary: list topups
+      parameters:
+      - name: query
+        in: query
+        description: Search through topups
+        required: false
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create topup
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                phone_number:
+                  type: string
+                amount:
+                  type: number
+              required:
+              - user_id
+              - phone_number
+              - amount
+  "/api/v1/topups/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show topup
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update topup
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update topup
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                phone_number:
+                  type: string
+                amount:
+                  type: number
+              required:
+              - user_id
+              - phone_number
+              - number
+    delete:
+      summary: delete topup
+      responses:
+        '200':
+          description: successful
   "/api/v1/transactions":
     get:
       summary: list transactions
